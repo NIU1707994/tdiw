@@ -10,6 +10,8 @@
     <body>
         <?php
 		    //completa
+            include_once __DIR__."/connectaBD.php";
+            $con=connectaBD();
         ?>
         <div id="layout">
             <!-- SECCIÓ 1 - Capçalera -->
@@ -22,7 +24,7 @@
             <!-- SECCIÓ 2 - Llistat dels diferents graus que ofereix l’escola d’enginyeria -->
             <section style="grid-area: graus;">
                 <header>
-                    <h3>Graus disponibles: </h3>
+                    <4x2h3>Graus disponibles: </h3>
                 </header>
                 <ul>
                     <li><a href="http://www.uab.cat/grauEI">Enginyeria Informàtica</a>
@@ -52,6 +54,17 @@
                         <select name="grau" id="graus">
                         <?php
                             //completa
+                            $query = "SELECT * FROM graus";
+                            $resultset = pg_query($con, $query);
+                            $rows = pg_fetch_all($resultset);
+                            foreach ($rows as $row)
+                            {
+                                //echo "<option value='".$row['id']."'>".$row['nom']."</option>";
+                        ?>
+                            <option value="<?=$row['id']?>"><?=$row['nom']?></option>
+                        <?php
+
+                            }
                         ?>
                         </select>
                         <p>Tria la menció que t'atreu més:<p>
