@@ -5,8 +5,7 @@ SESSIÓ DE PROBLEMES 11 – Representational State Transfer (REST)
 
 ## Local Requirements
 
-1. Locally, you will need to download the document pX_todo.xxx to fillout your answers. Chose one document format.
-2. You will need to locally install the wireshark software to analyse network traffic.
+1. Locally, you will need to download the document pX_todo.xxx to fillout your answers. Choose one document format.
 
 
 ## Remote Requirements
